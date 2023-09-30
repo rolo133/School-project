@@ -28,3 +28,7 @@ footer {
   margin-top: 10px;
   border-top: 1px solid #ccc;
 }
+
+Body {
+  flex-grow: 1;
+}
