@@ -21,3 +21,10 @@ li a {
 li a:hover {
   background-color: #ff0000;
 }
+
+footer {
+  text-align: center;
+  padding: 20px;
+  margin-top: 10px;
+  border-top: 1px solid #ccc;
+}
