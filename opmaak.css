@@ -27,19 +27,4 @@ footer {
   padding: 20px;
   margin-top: 10px;
   border-top: 1px solid #ccc;
-  position: absolute;
-}
-
-main {
-  min-height: calc(100% - (headerheight + footerheight));
-}
-
-body {
-  position: relative;
-}
-
-html, body {
-  height: 100%;
-  margin: 0;
-  padding: 0;
 }
