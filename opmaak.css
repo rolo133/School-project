@@ -1,9 +1,9 @@
 ul {
-  list-style-type: none;
+  list-style-type: none; /*dit zoorgt ervoor dat de puntjes van de list wegvallen*/
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #640808;
+  background-color: #640808; /*dit zoorgt voor de kleur voor de menubalk*/
 }
 
 li {
@@ -12,20 +12,20 @@ li {
 
 li a {
   display: block;
-  color: rgb(255, 255, 255);
+  color: rgb(255, 255, 255); /*dit is de tekstkleur voor de menu knoppen*/
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #ff0000;
+  background-color: #ff0000; /*de background-color met hovor zoorgt voor de kleur als je over de knoppen muist*/
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  position: bottom;
-  bottom: 0;
+  position: bottom; /*bottom zoorgt ervoor dat de footer altijd onderin blijft*/
+  bottom: 0; /*dit is de afstand tussen de onderkant en de footer*/
   width: 100%;
 }
