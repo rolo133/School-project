@@ -1,0 +1,76 @@
+<html>
+    <body>
+        <script>
+    var opnieuw;
+    var rondes;
+    var aantal;
+    var richting;
+    var teller;
+
+    window.alert("hoeveel getallen wil je in de rij hebben?");
+    aantal = Number(window.prompt('Enter a value for aantal'));
+    var getallenrij = new Array(aantal);
+    var getallenruimte;
+
+    // het programma vraagt welke kant de gebruiker de lijst gesorterd wilt hebben
+    window.alert("welke kant wil je de rij op sorteren? Van hoog naar laag of van laag naar hoog? Typ omhoog voor van laag naar hoog en omlaag voor van hoog naar laag.");
+    richting = window.prompt('Enter a value for richting');
+
+    // het programma heeft een lijst gemaakt met een gegeven aantal cijfers en vult die in met het aantal random getallen tussen 0 en 100
+    for (teller = 0; teller <= aantal - 1; teller++) {
+        getallenrij[teller] = Math.floor(Math.random() * 100);
+    }
+
+    // het programma kijkt welke kant de gebruiker op wilt en gaat dat pad in
+    if (richting == "omhoog") {
+        for (rondes = 0; rondes <= aantal; rondes++) {
+            for (teller = 0; teller <= aantal - 2 - rondes; teller++) {
+                if (getallenrij[teller] > getallenrij[teller + 1]) {
+                    getallenruimte = getallenrij[teller];
+                    getallenrij[teller] = getallenrij[teller + 1];
+                    getallenrij[teller + 1] = getallenruimte;
+                }
+            }
+        }
+    } else {
+        for (rondes = 0; rondes <= aantal; rondes++) {
+
+            // de tweede loop laat het algoritme door de lijst heen gaan en kijkt of het al gesorteerd is. Als de onderkant gesorteerd is dan wordt daar niet nog een keer naar gekeken of het gesorteerd is vandaar de -2 inplaats van de -1
+            for (teller = 0; teller <= aantal - 2; teller++) {
+
+                // het algoritme kijkt of het eerste getal hoger of lager is dan het volgende getal en gaat dan het goede pad in
+                if (getallenrij[teller] < getallenrij[teller + 1]) {
+
+                    // het eerste getal wordt in een ruimte gestopt om te bewaren voor volgende stappen
+                    getallenruimte = getallenrij[teller];
+
+                    // het eerste getal wordt vervangen door het tweede getal
+                    getallenrij[teller] = getallenrij[teller + 1];
+
+                    // het tweede getal dat nu dubbel in de lijst staat wordt vervangen door het getal in de bewaar ruimte
+                    getallenrij[teller + 1] = getallenruimte;
+                }
+            }
+        }
+    }
+
+    // als het algoritme klaar is dan zet het programma de uitkomst in een bericht en kan de gebruiker de volledige lijst zien.
+    window.alert("de gesorteerde lijst is als volgt:");
+    for (teller = 0; teller <= aantal - 2; teller++) {
+        window.alert(" " + getallenrij[teller]);
+    }
+    window.alert(" " + getallenrij[teller]);
+    window.alert("bedankt voor het gebruiken van het sorteer algoritme, zou je misschien het algoritme opnieuw willen gebruiken?");
+    opnieuw = window.prompt('Enter a value for opnieuw');
+
+    // als het programma klaar is dan kan het programma zich resetten en kan je als je wilt het programma opnieuw gebruiken
+    if (opnieuw == "ja") {
+        window.alert("het algoritme zal opnieuw opgestart worden.");
+        main();
+    } else {
+        window.alert("helaas, fijne dag verder nog.");
+    }
+
+        </script>
+    </body>
+</html>
