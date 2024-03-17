@@ -1,1 +1,39 @@
+<html>
+    <body>
+        <script>
+    var getallen = new Array(50);
+    var plek;
+    var zoeken;
+    var cijfer;
 
+    // het programma maakt een lijst met random getallen
+    for (plek = 0; plek <= 49; plek++) {
+        getallen[plek] = Math.floor(Math.random() * 100);
+    }
+    window.alert("welk cijfer zou je willen zoeken?");
+    zoeken = Number(window.prompt('Enter a value for zoeken'));
+
+    // het programma reset en start bij plek 0
+    plek = 0;
+
+    // het programma gaat door de lijst en kijkt of het gezochte getal in de lijst staat. Als het er niet staat dan schuift hij op om te kijken of hij verderop in de lijst staat
+    while (getallen[plek] != zoeken && plek < 49) {
+        plek = plek + 1;
+    }
+    if (plek == 49) {
+
+        // als het getal op de laatste plek is zal het programma checken of het getal er wel echt is of dat hij niet bestaat binnen deze lijst
+        if (getallen[plek] == zoeken) {
+            window.alert(zoeken.toString() + " zit op plek " + plek);
+        } else {
+            window.alert(zoeken.toString() + " zit niet in de lijst");
+        }
+    } else {
+
+        // als het algoritme niet bij het einde van de lijst is gekomen is het gestopt bij het gezochte getal en zal een bericht geven over waar het getal zich bevind
+        window.alert(zoeken.toString() + " zit op plek " + plek);
+    }
+
+        </script>
+    </body>
+</html>
