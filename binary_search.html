@@ -1,0 +1,88 @@
+<html>
+    <body>
+        <script>
+    var aantalgokken;
+    var gokgetal;
+    var zoekgetal;
+    var opnieuw;
+    var rondes;
+    var aantal;
+    var teller;
+
+    window.alert("hoeveel getallen wil je in de rij hebben?");
+    aantal = Number(window.prompt('Enter a value for aantal'));
+    var getallenrij = new Array(aantal);
+
+    // het programma maakt een rij met random getallen aan om te sorteren
+    var getallenruimte;
+
+    for (teller = 0; teller <= aantal - 1; teller++) {
+
+        // in de for-loop wordt voor elk vakje in de erray een random getal ingevoerd
+        getallenrij[teller] = Math.floor(Math.random() * 100);
+    }
+    for (rondes = 0; rondes <= aantal; rondes++) {
+
+        // de tweede loop zoorgt dat het algoritme door de hele lijst heen gaat en als het klopt dan gaat hij onderaan niet meer kijken en wordt het algoritme sneller. Vandaag de -2 inplaatsvan -1
+        for (teller = 0; teller <= aantal - 2 - rondes; teller++) {
+
+            // het programma checkt of het getal in de rij op de goede volgorde staat.
+            if (getallenrij[teller] > getallenrij[teller + 1]) {
+                getallenruimte = getallenrij[teller];
+
+                // als het getal niet goed staat wordt het eerst in een ruimte gestopt waar het bewaard wordt
+                getallenrij[teller] = getallenrij[teller + 1];
+
+                // het getal voor het getal dat niet kolopt wordt op de plek gezet waar de verkeerde eerst stond
+                getallenrij[teller + 1] = getallenruimte;
+
+                // het getal in de ruimte wordt op de plek gezet waar de andere getal eerst stond
+            }
+        }
+    }
+    window.alert("de lijst is gesorteerd, nu kan je binary search gebruiken.");
+
+    // het programma kiest een getal uit de lijst en gebruikt dat als het gezochte getal
+    zoekgetal = getallenrij[Math.floor(Math.random() * aantal)];
+    window.alert("welk getal denk je dat het is?");
+    window.alert("het getal zal tussen de 0 en de 100 zitten.");
+
+    // het programma reset het aantal gokken zodat het gokken kan beginnen
+    aantalgokken = 0;
+    gokgetal = Number(window.prompt('Enter a value for gokgetal'));
+
+    // het programma gaat pas uit de loop als het getal dat je hebt ingevoerd gelijk is aan het gezochte getal
+    while (zoekgetal != gokgetal) {
+
+        // het programma kijkt of het gokgetal groter of kleiner is dan het gezochte getal
+        if (gokgetal > zoekgetal) {
+            window.alert("het getal is lager");
+        } else {
+            window.alert("het getal is hoger");
+        }
+
+        // als het fout geraden is komt er een gok bij en kan je het opnieuw proberen
+        aantalgokken = aantalgokken + 1;
+        window.alert("probeer het opnieuw");
+        gokgetal = Number(window.prompt('Enter a value for gokgetal'));
+    }
+    if (aantalgokken == 0) {
+        aantalgokken = aantalgokken + 1;
+    }
+    window.alert("gefeliciteerd je hebt het getal goedgekokt.");
+
+    // het programma weet hoevaak je hebt gegokt en laat dat zien in een berichtje
+    window.alert(" je deed er " + aantalgokken + " keer over.");
+    window.alert("wil je het programma opnieuw gebruiken?");
+    opnieuw = window.prompt('Enter a value for opnieuw');
+
+    // het programma kan opnieuw gebruikt worden
+    if (opnieuw == "ja") {
+        window.alert("het programma zal opnieuw opgestart worden.");
+        main();
+    } else {
+        window.alert("helaas, fijne dag verder nog.");
+    }
+        </script>
+    </body>
+</html>
