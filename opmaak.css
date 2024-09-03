@@ -45,9 +45,9 @@ footer {
 .third-level-menu > li
 {
     height: 30px;
-    background: #999999;
+    background: #640808;
 }
-.third-level-menu > li:hover { background: #CCCCCC; }
+.third-level-menu > li:hover { background: #ff0000; }
 
 .second-level-menu
 {
@@ -65,9 +65,9 @@ footer {
 {
     position: relative;
     height: 30px;
-    background: #999999;
+    background: #640808;
 }
-.second-level-menu > li:hover { background: #CCCCCC; }
+.second-level-menu > li:hover { background: #ff0000; }
 
 .top-level-menu
 {
@@ -82,7 +82,7 @@ footer {
     float: left;
     height: 30px;
     width: 150px;
-    background: #999999;
+    background: #640808;
 }
 .top-level-menu > li:hover { background: #CCCCCC; }
 
@@ -98,7 +98,7 @@ footer {
 .top-level-menu a /* Apply to all links inside the multi-level menu */
 {
     font: bold 14px Arial, Helvetica, sans-serif;
-    color: #FFFFFF;
+    color: #640808;
     text-decoration: none;
     padding: 0 0 0 10px;
 
@@ -106,4 +106,4 @@ footer {
     display: block;
     line-height: 30px;
 }
-.top-level-menu a:hover { color: #000000; }
+.top-level-menu a:hover { color: #ff0000; }
