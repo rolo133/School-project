@@ -84,7 +84,7 @@ footer {
     width: 150px;
     background: #640808;
 }
-.top-level-menu > li:hover { background: #CCCCCC; }
+.top-level-menu > li:hover { background: #640808; }
 
 .top-level-menu li:hover > ul
 {
