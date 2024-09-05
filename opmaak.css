@@ -98,7 +98,7 @@ footer {
 .top-level-menu a /* Apply to all links inside the multi-level menu */
 {
     font: bold 14px Arial, Helvetica, sans-serif;
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
     padding: 0 0 0 10px;
 
