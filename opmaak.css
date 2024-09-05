@@ -1,9 +1,9 @@
-ul {
-  list-style-type: none; /*dit zoorgt ervoor dat de puntjes van de list wegvallen*/
+/*ul {
+  list-style-type: none;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #640808; /*dit zoorgt voor de kleur voor de menubalk*/
+  background-color: #640808;
 }
 
 li {
@@ -12,14 +12,14 @@ li {
 
 li a {
   display: block;
-  color: rgb(255, 255, 255); /*dit is de tekstkleur voor de menu knoppen*/
+  color: rgb(255, 255, 255);
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
 }
 
 li a:hover {
-  background-color: #ff0000; /*de background-color met hovor zoorgt voor de kleur als je over de knoppen muist*/
+  background-color: #ff0000; */
 }
 
 footer {
