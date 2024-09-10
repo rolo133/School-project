@@ -1,27 +1,3 @@
-/*ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-  background-color: #640808;
-}
-
-li {
-  float: left;
-}
-
-li a {
-  display: block;
-  color: rgb(255, 255, 255);
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-}
-
-li a:hover {
-  background-color: #ff0000; */
-}
-
 footer {
   text-align: center;
   padding: 20px;
@@ -84,7 +60,7 @@ footer {
     width: 150px;
     background: #640808;
 }
-.top-level-menu > li:hover { background: #640808; }
+.top-level-menu > li:hover { background: #ff0000; }
 
 .top-level-menu li:hover > ul
 {
